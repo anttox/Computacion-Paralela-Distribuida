@@ -1,2 +1,3 @@
 #Actividad 3
+
 Revisar las técnicas básicas de scripting bash. De esta manera, compilará y modificará una secuencia de comandos de Python para una aplicación web simple. Además, creará un script bash para automatizar el proceso de creación de un Dockerfile, creación del contenedor Docker y ejecución del contenedor Docker. Finalmente, utilizar los comandos de docker para investigar las complejidades de la instancia del contenedor Docker.
