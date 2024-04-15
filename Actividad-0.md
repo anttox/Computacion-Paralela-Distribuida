@@ -26,3 +26,5 @@ La línea de comandos promueve un entendimiento más profundo de cómo funcionan
 computadores y las redes, alentando a todos a pensar y resolver problemas de manera
 algorítmica. Esta forma de pensamiento es transferible a muchos otros ámbitos de la
 informática y la ingeniería de software.
+
+## Contenido
