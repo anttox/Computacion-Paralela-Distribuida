@@ -28,3 +28,15 @@ algorítmica. Esta forma de pensamiento es transferible a muchos otros ámbitos 
 informática y la ingeniería de software.
 
 ## Contenido
+
+- What is "the Shell"?
+- Navigation
+- Looking Around
+- A Guided Tour
+- Manipulation Files
+- Working with Commands
+- I/O Redirection
+- Expansion
+- Permissions
+- Job Control
+
