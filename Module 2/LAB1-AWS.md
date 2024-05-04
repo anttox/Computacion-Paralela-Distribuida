@@ -15,7 +15,7 @@ Comando para verificar los recursos creados de la pila: "aws s3api list-buckets"
 Eliminar pila -> se elimina todos los recursos que contiene el deposito -> tambien se elimina el deposito creado\
 Comando para eliminar pila: "aws cloudformation delete-stack --stack-name ade-my-bucket"\
 Comando para confirmar si la pila ha sido eliminada: "aws cloudformation list-stacks"\
-Comando para verificar si el deposito se elimino: "aws s3api list-buckets"\
+Comando para verificar si el deposito se elimino: "aws s3api list-buckets"
 
 ![TASK1](https://cdn.discordapp.com/attachments/1030129034593579012/1233957449221013634/image.png?ex=6636e4ed&is=6635936d&hm=b5afa3b6bb589dc94508acde7fbad0172b49fb783bf0ba5e044d0e8baab67a67&)
 
