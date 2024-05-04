@@ -21,11 +21,11 @@ Comando para verificar si el deposito se elimino: aws s3api list-buckets
 ![TASK1](https://cdn.discordapp.com/attachments/1030129034593579012/1233957449221013634/image.png?ex=6636e4ed&is=6635936d&hm=b5afa3b6bb589dc94508acde7fbad0172b49fb783bf0ba5e044d0e8baab67a67&)
 
 ## TASK2: Cargar un conjunto de datos en un deposito S3 (Descargamos y descomprimimos un conjunto de datos de muestra)
-Comando para descargar archivo .csv en un archivo ZIP: wget https://aws-tc-largeobjects.s3.us-west-2.amazonaws.com/CUR-TF-200-ACDSCI-1-DEV/lab-01-s3/code.zip -P /home/ec2-user/environment
-Comando para descomprimir archivo ZIP: unzip code.zip
-Comando para recuperar el nombre del deposito S3: aws s3api list-buckets
-Comando para copiar el archivo .csv en el eposito S3: aws s3 cp lab1.csv s3://<LAB-BUCKET-NAME>
-Comando para verificar la operacion: aws s3 ls s3://<LAB-BUCKET-NAME>
+Comando para descargar archivo .csv en un archivo ZIP: "wget https://aws-tc-largeobjects.s3.us-west-2.amazonaws.com/CUR-TF-200-ACDSCI-1-DEV/lab-01-s3/code.zip -P /home/ec2-user/environment"
+Comando para descomprimir archivo ZIP: "unzip code.zip"
+Comando para recuperar el nombre del deposito S3: "aws s3api list-buckets"
+Comando para copiar el archivo .csv en el eposito S3: "aws s3 cp lab1.csv s3://<LAB-BUCKET-NAME>"
+Comando para verificar la operacion: "aws s3 ls s3://<LAB-BUCKET-NAME>"
 
 ![TASK2](https://cdn.discordapp.com/attachments/1030129034593579012/1233967238319443968/image.png?ex=6636454b&is=6634f3cb&hm=6350df6359f953bfaee3e99bf4d20b4707446afdadf79ee2ee9ecb544ba225ed&)
 
@@ -50,11 +50,11 @@ Clase de almacenamiento Intelligent-Tiering: Se asegura que los costos se optimi
 
 ## TASK5: Usaremos el formato GZIP para comprimir el archivo de datos y compararemos el tamaño con el archivo comprimido con ZIP
 Cargaremos el archivo GZIP en el deposito S3 y luego confirmaremos si se puede usar S3 Select para consultar el archivo comprimido
-Comando para comprimir el archivo en formato ZIP: zip lab lab1.csv
-Comando para comprimir el archivo lab.csv en formato GZIP: gzip -v lab1.csv
-Comando para enumerar objetos del directorio: ls -la
-Comando para cargar el conjunto de datos (DATASET) en el deposito (bucket) S3: aws s3 cp lab1.csv.gz s3://<LAB-BUCKET-NAME> --cache-control max-age=60
---cache-control: especificia el comportamiento de almacenamiento en cache del obejto a lo largo de la cadena solicitud/respuesta
+Comando para comprimir el archivo en formato ZIP: "zip lab lab1.csv"
+Comando para comprimir el archivo lab.csv en formato GZIP: "gzip -v lab1.csv"
+Comando para enumerar objetos del directorio: "ls -la"
+Comando para cargar el conjunto de datos (DATASET) en el deposito (bucket) S3: "aws s3 cp lab1.csv.gz s3://<LAB-BUCKET-NAME> --cache-control max-age=60"
+"--cache-control": especificia el comportamiento de almacenamiento en cache del objeto a lo largo de la cadena solicitud/respuesta
 Pasos par verificar si podemos usar S3 Select: S3 -> buckets -> choose lab1.csv.gz -> Acciones de objetos -> Consultar con S3 Select
 
 ![TASK5.1](https://cdn.discordapp.com/attachments/1030129034593579012/1233994773526876170/image.png?ex=66365ef0&is=66350d70&hm=c8dc98adefa5861e4d1290753d919ba414cd80851ded14f728062e62fc7957da&)
@@ -65,10 +65,10 @@ Pasos par verificar si podemos usar S3 Select: S3 -> buckets -> choose lab1.csv.
 Tomar acciones para determinar si el grupo y la politica tienen permisos para acceder al conjunto de datos Amazon S3.
 Pasos: IAM -> Grupo de usuarios -> permisos
 La plantilla de CloudFormation que creó los recursos en su entorno de laboratorio genera la clave de acceso y la clave de acceso secreta para el usuario
-Comando para crear una variable para la clave de acceso: AK=<ACCESS-KEY>
-Comando para crear una variable papra la clave de acceso secreta: SAK=<SECRET-ACCESS-KEY>
-Comando para probar si el usuario puede ejecutar un comando AWS CLI para el servicio Amazon Elastic Compute Cloud (Amazon EC2): AWS_ACCESS_KEY_ID=$AK AWS_SECRET_ACCESS_KEY=$SAK aws ec2 describe-instances --region us-east-1
-Comando para probar si el usuario puede ejecutar comandos de AWS CLI en un objeto S3: AWS_ACCESS_KEY_ID=$AK AWS_SECRET_ACCESS_KEY=$SAK aws s3api get-object --bucket <LAB-BUCKET-NAME> --key lab1.csv --region us-east-1 pulled_lab.csv
+Comando para crear una variable para la clave de acceso: "AK=<ACCESS-KEY>"
+Comando para crear una variable papra la clave de acceso secreta: "SAK=<SECRET-ACCESS-KEY>"
+Comando para probar si el usuario puede ejecutar un comando AWS CLI para el servicio Amazon Elastic Compute Cloud (Amazon EC2): "AWS_ACCESS_KEY_ID=$AK AWS_SECRET_ACCESS_KEY=$SAK aws ec2 describe-instances --region us-east-1"
+Comando para probar si el usuario puede ejecutar comandos de AWS CLI en un objeto S3: "AWS_ACCESS_KEY_ID=$AK AWS_SECRET_ACCESS_KEY=$SAK aws s3api get-object --bucket <LAB-BUCKET-NAME> --key lab1.csv --region us-east-1 pulled_lab.csv"
 Dato Task6: Comprender cómo IAM autentica y autoriza a los usuarios es importante cuando se utilizan canalizaciones de datos para sus datos en AWS. Quiere asegurarse de que solo las personas que tienen una necesidad crítica puedan acceder y modificar los datos
 
 ![TASK6.1](https://cdn.discordapp.com/attachments/1030129034593579012/1234007037940338688/image.png?ex=66366a5c&is=663518dc&hm=fb14bf0a776a37826c417265d2c81ab47d6b8a06ec60467fbda65829a001b074&)
