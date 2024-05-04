@@ -1,7 +1,6 @@
 # AWS LAB1
 ## TASK1: Creamos una plantilla y una pila de CloudFormation en un deposito S3
 La plantilla de Cloudformation es un modelo
-
 La pila de CloudFormation crea un deposito S3 -> ade-s3lab-bucket Y una politifa de IAM -> Policy-For-Data-Scientists
 
 La pila de CloudFormation (Instancia real)  crea y gestiona el estado y dependencias de los recursos de la plantilla
