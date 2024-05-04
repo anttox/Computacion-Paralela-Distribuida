@@ -19,11 +19,11 @@ Comando para verificar si el deposito se elimino: "aws s3api list-buckets"
 
 ![TASK1](https://cdn.discordapp.com/attachments/1030129034593579012/1233957449221013634/image.png?ex=6636e4ed&is=6635936d&hm=b5afa3b6bb589dc94508acde7fbad0172b49fb783bf0ba5e044d0e8baab67a67&)
 
-## TASK2: Cargar un conjunto de datos en un deposito S3 (Descargamos y descomprimimos un conjunto de datos de muestra)
-Comando para descargar archivo .csv en un archivo ZIP: "wget https://aws-tc-largeobjects.s3.us-west-2.amazonaws.com/CUR-TF-200-ACDSCI-1-DEV/lab-01-s3/code.zip -P /home/ec2-user/environment"
-Comando para descomprimir archivo ZIP: "unzip code.zip"
-Comando para recuperar el nombre del deposito S3: "aws s3api list-buckets"
-Comando para copiar el archivo .csv en el eposito S3: "aws s3 cp lab1.csv s3://<LAB-BUCKET-NAME>"
+## TASK2: Cargar un conjunto de datos en un deposito S3 (Descargamos y descomprimimos un conjunto de datos de muestra)\
+Comando para descargar archivo .csv en un archivo ZIP: "wget https://aws-tc-largeobjects.s3.us-west-2.amazonaws.com/CUR-TF-200-ACDSCI-1-DEV/lab-01-s3/code.zip -P /home/ec2-user/environment"\
+Comando para descomprimir archivo ZIP: "unzip code.zip"\
+Comando para recuperar el nombre del deposito S3: "aws s3api list-buckets"\
+Comando para copiar el archivo .csv en el eposito S3: "aws s3 cp lab1.csv s3://<LAB-BUCKET-NAME>"\
 Comando para verificar la operacion: "aws s3 ls s3://<LAB-BUCKET-NAME>"
 
 ![TASK2](https://cdn.discordapp.com/attachments/1030129034593579012/1233967238319443968/image.png?ex=6636454b&is=6634f3cb&hm=6350df6359f953bfaee3e99bf4d20b4707446afdadf79ee2ee9ecb544ba225ed&)
